@@ -1,4 +1,6 @@
-## NestJs - Angular Training App - Courses Manager
+## Courses Manager - NestJs/Angular Training App
+
+This app is based on the boilerplate of ["NestJs In Practice" course](https://github.com/angular-university/nestjs-course/tree/1-start)
 
 # Running NestJs Backend Server
 
