@@ -16,6 +16,7 @@ This is a small Node REST API server.
 
 To run the frontend part of our code, we will use the Angular CLI:
 
+    npm install
     npm start 
 
 The application is visible at port 4200: [http://localhost:4200](http://localhost:4200)
