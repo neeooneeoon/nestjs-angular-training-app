@@ -1,6 +1,6 @@
 ## Courses Manager - NestJs/Angular Training App
 
-This app is based on the boilerplate of ["NestJs In Practice" course](https://github.com/angular-university/nestjs-course/tree/1-start)
+This app is based on the boilerplate of ["NestJs In Practice" course](https://github.com/angular-university/nestjs-course/tree/1-start). The Angular was pre-written by the course's tutor and the backend NestJs API is self-written based on the course's documentation and NestJs Documentation.
 
 # Running NestJs Backend Server
 
