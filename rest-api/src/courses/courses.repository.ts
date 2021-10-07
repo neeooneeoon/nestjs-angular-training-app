@@ -27,7 +27,6 @@ export class CoursesRepository {
         const newCourse = this.courseModel(course);
         await newCourse.save();
         return newCourse.toObject({versionKey: false});
-        //return this.courseModel.create(course);
     }
 
 }

@@ -1,15 +1,18 @@
+import { IsBoolean, IsInt, IsMongoId, IsString } from "class-validator";
 
-export interface Course {
+export class Course {
+  @IsString()
+  @IsMongoId()
   _id: string;
-  seqNo:number;
-  url:string;
-  iconUrl: string;
-  courseListIcon: string;
-  description: string;
-  longDescription?: string;
-  category: string;
-  lessonsCount: number;
-  promo: boolean;
+  @IsInt({message: "seqNo must be numeric"}) seqNo:number;
+  @IsString({always: false}) url:string;
+  @IsString() iconUrl: string;
+  @IsString() courseListIcon: string;
+  @IsString() description: string;
+  @IsString() longDescription?: string;
+  @IsString() category: string;
+  @IsInt() lessonsCount: number;
+  @IsBoolean() promo: boolean;
 }
 
 
