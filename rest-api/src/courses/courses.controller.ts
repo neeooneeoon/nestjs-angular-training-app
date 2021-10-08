@@ -5,6 +5,7 @@ import {
     Delete,
     Get,
     HttpException,
+    NotFoundException,
     Param,
     ParseIntPipe,
     Post,
@@ -22,6 +23,15 @@ export class CoursesController {
     @Get()
     async findAllCourses(): Promise<Course[]> {
         return this.coursesDB.findAll();
+    }
+
+    @Get(":courseUrl")
+    async findCourseByUrl(@Param("courseUrl") courseUrl:string): Promise<Course> {
+        const course = this.coursesDB.findCourseByUrl(courseUrl);
+        if (!course) {
+            throw new NotFoundException("Could not find course for url" + courseUrl);
+        }
+        return course;
     }
 
     @Post()
