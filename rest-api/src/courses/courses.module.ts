@@ -4,6 +4,8 @@ import { LessonsSchema } from "./lessons/lessons.schema";
 import { CoursesController } from "./courses.controller";
 import { CoursesRepository } from "./courses.repository";
 import { CoursesSchema } from "./courses.schema";
+import { LessonsController } from "./lessons/lessons.controller";
+import { LessonsRepository } from "./lessons/lessons.repository";
 
 @Module({
     imports: [
@@ -13,12 +15,15 @@ import { CoursesSchema } from "./courses.schema";
         ])
     ],
     controllers: [
-        CoursesController
+        CoursesController,
+        LessonsController
     ],
     providers: [
-        CoursesRepository
+        CoursesRepository,
+        LessonsRepository
     ]
 })
+
 export class CoursesModule {
 
 }
